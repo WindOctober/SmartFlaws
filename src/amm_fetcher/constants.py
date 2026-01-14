@@ -1,0 +1,10 @@
+ETHERSCAN_V2_API_BASE = "https://api.etherscan.io/v2/api"
+
+# keccak256("PairCreated(address,address,address,uint256)")
+PAIRCREATED_TOPIC0 = "0x0d3648bd0f6ba80134a33ba9275ac585d9d315f0ad8355cddefde31afa28d0e9"
+
+TOKEN0_SELECTOR = "0x0dfe1681"
+TOKEN1_SELECTOR = "0xd21220a7"
+GETRESERVES_SELECTOR = "0x0902f1ac"
+BALANCEOF_SELECTOR = "0x70a08231"
+
