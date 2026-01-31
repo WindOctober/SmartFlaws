@@ -2,12 +2,32 @@ from __future__ import annotations
 
 import json
 import os
+import sys
 from pathlib import Path, PurePosixPath
 from typing import Any
 
 
 def read_text(path: Path) -> str:
     return path.read_text(encoding="utf-8").strip()
+
+
+def _use_color(stream: Any) -> bool:
+    if os.environ.get("NO_COLOR") is not None:
+        return False
+    if not hasattr(stream, "isatty") or not stream.isatty():
+        return False
+    term = (os.environ.get("TERM") or "").lower()
+    if term in ("", "dumb"):
+        return False
+    return True
+
+
+def color_path(path: Path | str, stream: Any = None) -> str:
+    s = str(path)
+    out = stream if stream is not None else sys.stdout
+    if not _use_color(out):
+        return s
+    return f"\x1b[1;36m{s}\x1b[0m"
 
 
 def load_api_key(api_key_path: Path | None) -> str:
@@ -132,4 +152,3 @@ def read_addresses_file(path: str) -> list[str]:
                 out.append(tok)
                 break
     return out
-

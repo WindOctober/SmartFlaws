@@ -1,19 +1,91 @@
 from __future__ import annotations
 
+import random
+import time
 from typing import Any
 
 from .http import http_post_json
 from .util import normalize_address
 
 
-def rpc_call(rpc_url: str, method: str, params: list[Any]) -> Any:
+def _sleep_backoff(attempt: int, *, base_s: float = 0.5, max_s: float = 8.0) -> None:
+    delay = min(max_s, base_s * (2**attempt))
+    delay *= 1.0 + random.random() * 0.2
+    time.sleep(delay)
+
+
+def _is_transient_rpc_error(error_obj: Any) -> bool:
+    if isinstance(error_obj, dict):
+        code = error_obj.get("code")
+        msg = str(error_obj.get("message") or "").lower()
+        # Common transient JSON-RPC provider codes/messages.
+        if code in (-32005, -32000, -32603):
+            return True
+        if any(
+            k in msg
+            for k in (
+                "rate limit",
+                "too many requests",
+                "exceeded",
+                "limit",
+                "timeout",
+                "timed out",
+                "temporarily unavailable",
+                "service unavailable",
+                "try again",
+                "busy",
+                "gateway",
+                "internal error",
+                "upstream",
+            )
+        ):
+            return True
+        return False
+    # Fallback: treat unknown-shaped errors as non-transient.
+    return False
+
+
+def rpc_call(rpc_url: str, method: str, params: list[Any], *, retries: int = 3) -> Any:
     payload = {"jsonrpc": "2.0", "id": 1, "method": method, "params": params}
-    resp = http_post_json(rpc_url, payload)
-    if not isinstance(resp, dict):
-        raise RuntimeError(f"Unexpected RPC response: {resp!r}")
-    if "error" in resp and resp["error"]:
-        raise RuntimeError(f"RPC error for {method}: {resp['error']!r}")
-    return resp.get("result")
+    attempts = max(1, int(retries) + 1)
+    last_exc: BaseException | None = None
+    for attempt in range(attempts):
+        try:
+            resp = http_post_json(rpc_url, payload)
+            if not isinstance(resp, dict):
+                raise RuntimeError(f"Unexpected RPC response: {resp!r}")
+            if "error" in resp and resp["error"]:
+                err = resp["error"]
+                if _is_transient_rpc_error(err) and attempt + 1 < attempts:
+                    _sleep_backoff(attempt)
+                    continue
+                raise RuntimeError(f"RPC error for {method}: {err!r}")
+            return resp.get("result")
+        except Exception as exc:
+            last_exc = exc
+            msg = str(exc).lower()
+            # http.py already retries common network errors; this is a second chance for
+            # providers that return valid JSON-RPC errors for transient conditions.
+            if attempt + 1 < attempts and any(
+                k in msg
+                for k in (
+                    "rate limit",
+                    "too many requests",
+                    "timed out",
+                    "timeout",
+                    "temporarily unavailable",
+                    "service unavailable",
+                    "connection reset",
+                    "remote end closed connection",
+                )
+            ):
+                _sleep_backoff(attempt)
+                continue
+            raise
+
+    if last_exc is not None:
+        raise last_exc
+    raise RuntimeError("Unexpected rpc_call retry loop exit")
 
 
 def rpc_block_number(rpc_url: str) -> int:
@@ -54,4 +126,3 @@ def rpc_get_logs(
     if isinstance(res, list):
         return [r for r in res if isinstance(r, dict)]
     return []
-

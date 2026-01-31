@@ -1,2 +1,1 @@
-"""AMM fetch + inspect utilities used by `SmartFlaws/fetch_bsc_amm.py`."""
-
+"""AMM fetch + inspect utilities used by `scripts/fetch_bsc_amm.py`."""

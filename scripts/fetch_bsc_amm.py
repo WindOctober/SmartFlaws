@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 def _bootstrap_src() -> None:
-    src_dir = Path(__file__).resolve().parent / "src"
+    src_dir = Path(__file__).resolve().parent.parent / "src"
     sys.path.insert(0, str(src_dir))
 
 
@@ -17,4 +17,3 @@ from amm_fetcher.cli import main  # noqa: E402
 
 if __name__ == "__main__":
     raise SystemExit(main(sys.argv[1:]))
-

@@ -1,3 +1,10 @@
 results/
 __pycache__/
 *.pyc
+.envrc
+.direnv/
+AGENTS.md
+# Some tools/editors might use lowercase naming.
+agent.md
+# Local debug artifacts
+output/
