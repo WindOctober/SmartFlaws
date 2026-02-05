@@ -1,0 +1,14 @@
+{
+  "tag": "20250328_SilicaPools",
+  "chain": "ethereum",
+  "urls": [
+    "https://etherscan.io/address/0xf3f84ce038442ae4c4dcb6a8ca8bacd7f28c9bde#code",
+    "https://etherscan.io/address/0x80bf7db69556d9521c03461978b8fc731dbbd4e4#code",
+    "https://etherscan.io/address/0xf6ffba5cbf285824000dac0b9431032169672b6e"
+  ],
+  "addresses": [
+    "0xf3f84ce038442ae4c4dcb6a8ca8bacd7f28c9bde",
+    "0x80bf7db69556d9521c03461978b8fc731dbbd4e4",
+    "0xf6ffba5cbf285824000dac0b9431032169672b6e"
+  ]
+}

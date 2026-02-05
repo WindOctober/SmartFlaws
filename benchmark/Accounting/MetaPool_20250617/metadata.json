@@ -1,0 +1,20 @@
+{
+  "tag": "20250617_MetaPool",
+  "chain": "ethereum",
+  "urls": [
+    "https://etherscan.io/address/0x48AFbBd342F64EF8a9Ab1C143719b63C2AD81710#code",
+    "https://etherscan.io/address/0x3747484567119592ff6841df399cf679955a111a#code"
+  ],
+  "addresses": [
+    "0x48AFbBd342F64EF8a9Ab1C143719b63C2AD81710",
+    "0x3747484567119592ff6841df399cf679955a111a"
+  ],
+  "notes": {
+    "event_date_utc": "2025-06-17",
+    "exploit_tx": "0x57ee419a001d85085478d04dd2a73daa91175b1d7c11d8a8fb5622c56fd1fa69",
+    "attacker": "0x48f1d0f5831eb6e544f8cbde777b527b87a1be98",
+    "attack_contract": "0xff13d5899aa7d84c10e4cd6fb030b80554424136",
+    "created_attack_contract": "0xC3D10bd8e051a2bE6408d18Be8464654F699a25a"
+  }
+}
+

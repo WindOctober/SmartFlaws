@@ -1,0 +1,61 @@
+{
+  "contractName": "LiquidationHandler",
+  "compilerVersion": "v0.8.28+commit.7893614a",
+  "optimizationUsed": "1",
+  "runs": "200",
+  "evmVersion": "cancun",
+  "constructorArguments": "000000000000000000000000c07e000044f95655c11fda4cd37f70a94d7e0a7d00000000000000000000000010101010e0c3171d894b71b3400668af311e7d9400000000000000000000000000000000efe883b3304aff71eacf72dbc3e1b577",
+  "library": "",
+  "licenseType": "",
+  "proxy": "0",
+  "implementation": "",
+  "swarmSource": "",
+  "abi": "[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_core\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_registry\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_insurancePool\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"}],\"name\":\"SafeERC20FailedOperation\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_collateral\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_collateralAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_debtAmount\",\"type\":\"uint256\"}],\"name\":\"CollateralDistributedAndDebtCleared\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_collateral\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_collateralAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_newHandler\",\"type\":\"address\"}],\"name\":\"CollateralMigrated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_collateral\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_debtBurned\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_amountWithdrawn\",\"type\":\"uint256\"}],\"name\":\"CollateralProccessed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_incentive\",\"type\":\"uint256\"}],\"name\":\"SetLiquidationIncentive\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"core\",\"outputs\":[{\"internalType\":\"contract ICore\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"debtByCollateral\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_collateral\",\"type\":\"address\"}],\"name\":\"distributeCollateralAndClearDebt\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"insurancePool\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_pair\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_borrower\",\"type\":\"address\"}],\"name\":\"liquidate\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_collateralForLiquidator\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"liquidateIncentive\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_collateral\",\"type\":\"address\"}],\"name\":\"migrateCollateral\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"debtCanceled\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_collateral\",\"type\":\"address\"}],\"name\":\"processCollateral\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_collateral\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_collateralAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_debtAmount\",\"type\":\"uint256\"}],\"name\":\"processLiquidationDebt\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"registry\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_incentive\",\"type\":\"uint256\"}],\"name\":\"setLiquidationIncentive\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}]",
+  "language": "Solidity",
+  "settings": {
+    "remappings": [
+      "ds-test/=node_modules/ds-test/src/",
+      "forge-std/=node_modules/forge-std/src/",
+      "frax-std/=node_modules/frax-standard-solidity/src/",
+      "@axelar-network/=node_modules/@axelar-network/",
+      "@chainlink/=node_modules/@chainlink/",
+      "@eth-optimism/=node_modules/@eth-optimism/",
+      "@layerzerolabs/=node_modules/@layerzerolabs/",
+      "@mean-finance/=node_modules/@mean-finance/",
+      "@openzeppelin/=node_modules/@openzeppelin/",
+      "@rari-capital/=node_modules/@rari-capital/",
+      "@uniswap/=node_modules/@uniswap/",
+      "base64-sol/=node_modules/base64-sol/",
+      "frax-standard-solidity/=node_modules/frax-standard-solidity/",
+      "hardhat-deploy/=node_modules/hardhat-deploy/",
+      "hardhat/=node_modules/hardhat/",
+      "solidity-bytes-utils/=node_modules/solidity-bytes-utils/",
+      "solidity-stringutils/=lib/surl/lib/solidity-stringutils/",
+      "surl/=lib/surl/"
+    ],
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "metadata": {
+      "useLiteralContent": false,
+      "bytecodeHash": "none",
+      "appendCBOR": true
+    },
+    "outputSelection": {
+      "*": {
+        "*": [
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "devdoc",
+          "userdoc",
+          "metadata",
+          "abi"
+        ]
+      }
+    },
+    "evmVersion": "cancun",
+    "viaIR": true,
+    "libraries": {}
+  }
+}

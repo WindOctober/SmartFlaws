@@ -1,0 +1,25 @@
+{
+  "contractName": "WKEYDAO",
+  "compilerVersion": "v0.7.5+commit.eb77ed08",
+  "optimizationUsed": 1,
+  "runs": null,
+  "settings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "outputSelection": {
+      "*": {
+        "*": [
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "devdoc",
+          "userdoc",
+          "metadata",
+          "abi"
+        ]
+      }
+    },
+    "libraries": {}
+  }
+}

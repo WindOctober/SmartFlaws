@@ -1,0 +1,24 @@
+{
+  "contractName": "TransparentUpgradeableProxy",
+  "compilerVersion": "v0.8.9+commit.e5eed63a",
+  "optimizationUsed": 1,
+  "runs": null,
+  "settings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "outputSelection": {
+      "*": {
+        "*": [
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "devdoc",
+          "userdoc",
+          "metadata",
+          "abi"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "contractName": "Stablecoin",
+  "compilerVersion": "v0.8.28+commit.7893614a",
+  "optimizationUsed": 1,
+  "runs": null,
+  "settings": {
+    "remappings": [
+      "ds-test/=node_modules/ds-test/src/",
+      "forge-std/=node_modules/forge-std/src/",
+      "frax-std/=node_modules/frax-standard-solidity/src/",
+      "@axelar-network/=node_modules/@axelar-network/",
+      "@chainlink/=node_modules/@chainlink/",
+      "@eth-optimism/=node_modules/@eth-optimism/",
+      "@layerzerolabs/=node_modules/@layerzerolabs/",
+      "@mean-finance/=node_modules/@mean-finance/",
+      "@openzeppelin/=node_modules/@openzeppelin/",
+      "@rari-capital/=node_modules/@rari-capital/",
+      "@uniswap/=node_modules/@uniswap/",
+      "base64-sol/=node_modules/base64-sol/",
+      "frax-standard-solidity/=node_modules/frax-standard-solidity/",
+      "hardhat-deploy/=node_modules/hardhat-deploy/",
+      "hardhat/=node_modules/hardhat/",
+      "solidity-bytes-utils/=node_modules/solidity-bytes-utils/",
+      "solidity-stringutils/=lib/surl/lib/solidity-stringutils/",
+      "surl/=lib/surl/"
+    ],
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "metadata": {
+      "useLiteralContent": false,
+      "bytecodeHash": "none",
+      "appendCBOR": true
+    },
+    "outputSelection": {
+      "*": {
+        "*": [
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "devdoc",
+          "userdoc",
+          "metadata",
+          "abi"
+        ]
+      }
+    },
+    "evmVersion": "cancun",
+    "viaIR": true,
+    "libraries": {}
+  }
+}

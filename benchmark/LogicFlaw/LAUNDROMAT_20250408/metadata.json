@@ -1,0 +1,16 @@
+{
+  "tag": "20250408_LAUNDROMAT",
+  "chain": "ethereum",
+  "addresses": [
+    "0x934cbbE5377358e6712b5f041D90313d935C501C"
+  ],
+  "urls": [
+    "https://etherscan.io/address/0x934cbbE5377358e6712b5f041D90313d935C501C#code"
+  ],
+  "notes": {
+    "event_date_utc": "2025-04-08",
+    "victim_contract": "0x934cbbE5377358e6712b5f041D90313d935C501C",
+    "exploit_tx": null,
+    "category": "Missing payment enforcement (free deposit -> withdraw drains contract)"
+  }
+}

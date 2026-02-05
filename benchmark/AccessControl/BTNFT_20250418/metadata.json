@@ -1,0 +1,19 @@
+{
+  "tag": "20250418_BTNFT",
+  "chain": "bsc",
+  "addresses": [
+    "0x0fc91b6fea2e7a827a8c99c91101ed36c638521b",
+    "0x7a4d144307d2dfa2885887368e4cd4678db3c27a"
+  ],
+  "urls": [
+    "https://bscscan.com/address/0x0fc91b6fea2e7a827a8c99c91101ed36c638521b#code",
+    "https://bscscan.com/address/0x7a4d144307d2dfa2885887368e4cd4678db3c27a"
+  ],
+  "notes": {
+    "event_date_utc": "2025-04-18",
+    "exploit_tx": "0x1e90cbff665c43f91d66a56b4aa9ba647486a5311bb0b4381de4d653a9d8237d",
+    "victim_contract": "0x0fc91b6fea2e7a827a8c99c91101ed36c638521b",
+    "attacker_eoa": "0x7a4d144307d2dfa2885887368e4cd4678db3c27a",
+    "category": "ERC721 transfer hook triggers unprotected reward claim"
+  }
+}

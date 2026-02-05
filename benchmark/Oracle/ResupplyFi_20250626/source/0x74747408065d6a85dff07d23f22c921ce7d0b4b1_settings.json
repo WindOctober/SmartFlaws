@@ -1,0 +1,67 @@
+{
+  "contractName": "RewardHandler",
+  "compilerVersion": "v0.8.28+commit.7893614a",
+  "optimizationUsed": "1",
+  "runs": "200",
+  "evmVersion": "cancun",
+  "constructorArguments": "000000000000000000000000c07e000044f95655c11fda4cd37f70a94d7e0a7d00000000000000000000000010101010e0c3171d894b71b3400668af311e7d9400000000000000000000000000000000efe883b3304aff71eacf72dbc3e1b57700000000000000000000000070a1879aeea28072e321d52427f0ac88603df61b00000000000000000000000011d5bc6175e416ecce06d7c94f232e6c7330fdd3000000000000000000000000b96699a960a2b6300889b4fb789a58b506f144ca000000000000000000000000cd32c9bf38abfeec2f5691dcb39cbc9ac55f0685",
+  "library": "",
+  "licenseType": "",
+  "proxy": "0",
+  "implementation": "",
+  "swarmSource": "",
+  "abi": "[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_core\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_registry\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_insurancepool\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_debtEmissionsReceiver\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_pairEmissions\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_insuranceEmissions\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_insuranceRevenue\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"bweight\",\"type\":\"uint256\"}],\"name\":\"BaseMinimumWeightSet\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"mweight\",\"type\":\"uint256\"}],\"name\":\"MinimumWeightSet\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"baseMinimumWeight\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_pair\",\"type\":\"address\"}],\"name\":\"checkNewRewards\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"claimInsuranceRewards\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_pair\",\"type\":\"address\"}],\"name\":\"claimRewards\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"core\",\"outputs\":[{\"internalType\":\"contract ICore\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"debtEmissionsReceiver\",\"outputs\":[{\"internalType\":\"contract ISimpleReceiver\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"emissionToken\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"epochLength\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"feeLogger\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getEpoch\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"epoch\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_pair\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_timespan\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"getPairRate\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"govStaker\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"insuranceEmissionReceiver\",\"outputs\":[{\"internalType\":\"contract ISimpleReceiver\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"insuranceEmissions\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"insuranceRevenue\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"insurancepool\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_oldRewardHandler\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"_migrateTimestamp\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"_migrateMinWeights\",\"type\":\"bool\"}],\"name\":\"migrateState\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"minimumWeights\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pairEmissions\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"pairTimestamp\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"priceWatcher\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"queueInsuranceRewards\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"queueStakingRewards\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"registry\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"revenueToken\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"setBaseMinimumWeight\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"setPairMinimumWeight\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_pair\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"setPairWeight\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"startTime\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"stateMigrated\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}]",
+  "language": "Solidity",
+  "settings": {
+    "remappings": [
+      "ds-test/=node_modules/ds-test/src/",
+      "forge-std/=lib/forge-std/src/",
+      "frax-std/=node_modules/frax-standard-solidity/src/",
+      "openzeppelin-foundry-upgrades/=lib/openzeppelin-foundry-upgrades/src/",
+      "@openzeppelin/foundry-upgrades/=lib/openzeppelin-foundry-upgrades/src/",
+      "@openzeppelin/contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/contracts/",
+      "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+      "@axelar-network/=node_modules/@axelar-network/",
+      "@chainlink/=node_modules/@chainlink/",
+      "@eth-optimism/=node_modules/@eth-optimism/",
+      "@layerzerolabs/=node_modules/@layerzerolabs/",
+      "@mean-finance/=node_modules/@mean-finance/",
+      "@rari-capital/=node_modules/@rari-capital/",
+      "@uniswap/=node_modules/@uniswap/",
+      "base64-sol/=node_modules/base64-sol/",
+      "erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/",
+      "frax-standard-solidity/=node_modules/frax-standard-solidity/",
+      "halmos-cheatcodes/=lib/openzeppelin-contracts-upgradeable/lib/halmos-cheatcodes/src/",
+      "hardhat-deploy/=node_modules/hardhat-deploy/",
+      "hardhat/=node_modules/hardhat/",
+      "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+      "openzeppelin-contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/",
+      "solidity-bytes-utils/=node_modules/solidity-bytes-utils/",
+      "solidity-stringutils/=lib/surl/lib/solidity-stringutils/",
+      "surl/=lib/surl/"
+    ],
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "metadata": {
+      "useLiteralContent": false,
+      "bytecodeHash": "none",
+      "appendCBOR": true
+    },
+    "outputSelection": {
+      "*": {
+        "*": [
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "devdoc",
+          "userdoc",
+          "metadata",
+          "abi"
+        ]
+      }
+    },
+    "evmVersion": "cancun",
+    "viaIR": true
+  }
+}

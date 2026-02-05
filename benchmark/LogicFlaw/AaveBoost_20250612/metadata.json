@@ -1,0 +1,12 @@
+{
+  "tag": "20250612_AAVEBOOST",
+  "chain": "ethereum",
+  "addresses": [
+    "0xd2933c86216dC0c938FfAFEca3C8a2D6e633e2cA",
+    "0x8FA5CF0aA8Af0e5ADc7B43746EA033CA1B8E68dE"
+  ],
+  "urls": [
+    "https://etherscan.io/address/0xd2933c86216dC0c938FfAFEca3C8a2D6e633e2cA#code",
+    "https://etherscan.io/address/0x8FA5CF0aA8Af0e5ADc7B43746EA033CA1B8E68dE#code"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "tag": "20250520_IRYSAI",
+  "chain": "bsc",
+  "urls": [
+    "https://bscscan.com/address/0x746727FC8212ED49510a2cB81ab0486Ee6954444#code",
+    "https://bscscan.com/address/0xeB703Ed8C1A3B1d7E8E29351A1fE5E625E2eFe04#code",
+    "https://bscscan.com/address/0x6233a81BbEcb355059DA9983D9fC9dFB86D7119f#code"
+  ],
+  "addresses": [
+    "0x746727FC8212ED49510a2cB81ab0486Ee6954444",
+    "0xeB703Ed8C1A3B1d7E8E29351A1fE5E625E2eFe04",
+    "0x6233a81BbEcb355059DA9983D9fC9dFB86D7119f"
+  ]
+}

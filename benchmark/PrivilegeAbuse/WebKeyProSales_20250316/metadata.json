@@ -1,0 +1,16 @@
+{
+  "tag": "20250316_wKeyDAO",
+  "chain": "bsc",
+  "urls": [
+    "https://bscscan.com/address/0xD511096a73292A7419a94354d4C1C73e8a3CD851#code",
+    "https://bscscan.com/address/0xc39c54868a4f842b02a99339f4a57a44efc310b8#code",
+    "https://bscscan.com/address/0x194B302a4b0a79795Fb68E2ADf1B8c9eC5ff8d1F#code",
+    "https://bscscan.com/address/0x3783c91ee49a303c17c558f92bf8d6395d2f76e3#code"
+  ],
+  "addresses": [
+    "0xD511096a73292A7419a94354d4C1C73e8a3CD851",
+    "0xc39c54868a4f842b02a99339f4a57a44efc310b8",
+    "0x194B302a4b0a79795Fb68E2ADf1B8c9eC5ff8d1F",
+    "0x3783c91ee49a303c17c558f92bf8d6395d2f76e3"
+  ]
+}
